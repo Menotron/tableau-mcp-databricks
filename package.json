@@ -1,0 +1,54 @@
+{
+  "name": "@menotron/tableau-mcp-databricks",
+  "description": "Tableau MCP Server for Databricks - enables AI agents to interact with Tableau Cloud via the Model Context Protocol.",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "license": "Apache-2.0",
+  "bin": {
+    "tableau-mcp-server": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsx src/scripts/build.ts",
+    "build:dev": "tsx src/scripts/build.ts --dev",
+    "start:http": "node build/index.js",
+    "start:http:apm": "node -r ./build/telemetry/tracing.js build/index.js",
+    "lint": "npm exec eslint"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "@zodios/core": "^10.9.6",
+    "axios-retry": "^4.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fast-levenshtein": "^3.0.0",
+    "jose": "^6.0.12",
+    "ssrfcheck": "^1.2.0",
+    "ts-results-es": "^5.0.1",
+    "zod": "^3.24.3",
+    "zod-validation-error": "^4.0.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/fast-levenshtein": "^0.0.1",
+    "@types/node": "^22.15.3",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "esbuild": "^0.25.5",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.5.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.1"
+  },
+  "engines": {
+    "node": ">=22.7.5"
+  }
+}

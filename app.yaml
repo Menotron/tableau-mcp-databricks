@@ -1,0 +1,26 @@
+command: ["npm", "run", "start:http"]
+env:
+  - name: TRANSPORT
+    value: "http"
+  - name: DANGEROUSLY_DISABLE_OAUTH
+    value: "true"
+  - name: DISABLE_SESSION_MANAGEMENT
+    value: "true"
+  - name: SERVER
+    value: ""
+  - name: SITE_NAME
+    value: ""
+  - name: PAT_NAME
+    value: ""
+  - name: PAT_VALUE
+    valueFrom: ""
+  - name: AUTH
+    value: "direct-trust"
+  - name: CONNECTED_APP_CLIENT_ID
+    valueFrom: ""
+  - name: CONNECTED_APP_SECRET_ID
+    valueFrom: ""
+  - name: CONNECTED_APP_SECRET_VALUE
+    valueFrom: ""
+  - name: JWT_SUB_CLAIM
+    value: ""
